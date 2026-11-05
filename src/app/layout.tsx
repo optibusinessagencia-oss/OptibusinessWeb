@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: META.ogTitle,
     description: META.ogDescription,
   },
-  twitter: { card: 'summary_large_image', title: META.ogTitle, description: META.ogDescription },
+  twitter: { card: 'summary', title: META.ogTitle, description: META.ogDescription },
 };
 
 export const viewport: Viewport = {

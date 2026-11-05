@@ -135,6 +135,10 @@ export default function Home() {
                 {DEMO.boton}
               </a>
               <p className="mt-5 max-w-xl text-sm text-tenue">{DEMO.aviso}</p>
+              <p className="mt-2 max-w-xl text-sm text-tenue">
+                {DEMO.datos}{' '}
+                <a href="/privacidad/" className="underline underline-offset-4 hover:text-texto">Política de privacidad</a>.
+              </p>
               <a href={wa.demo} {...ext} className="btn-enlace mt-6">{DEMO.cta}</a>
             </div>
             <div aria-hidden="true" className="hidden items-center justify-center gap-[5px] lg:flex">
@@ -153,7 +157,7 @@ export default function Home() {
               <h2 className="mt-2 text-[2rem] font-extrabold sm:text-5xl">{WHATSAPP.titulo}</h2>
               <p className="mt-6 max-w-xl text-lg text-tenue">{WHATSAPP.texto}</p>
               <p className="mt-6 max-w-xl text-tenue">{WHATSAPP.nota}</p>
-              <a href={wa.whatsapp_servicio} {...ext} className="btn btn-primario mt-8">{WHATSAPP.cta}</a>
+              <a href={wa.whatsapp_seccion} {...ext} className="btn btn-primario mt-8">{WHATSAPP.cta}</a>
             </div>
             <ul className="space-y-5 lg:pt-4">
               {WHATSAPP.puntos.map((p) => (

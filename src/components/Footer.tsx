@@ -25,7 +25,7 @@ export default function Footer() {
             <li><a href="/cookies/" className="hover:text-texto">Cookies</a></li>
             <li>
               <button type="button" className="hover:text-texto" onClick={() => window.dispatchEvent(new Event('ob:cookies'))}>
-                Configurar cookies
+                Aviso de cookies
               </button>
             </li>
           </ul>

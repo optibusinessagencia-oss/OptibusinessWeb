@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { LegalShell, T } from '@/components/Legal';
 
-export const metadata: Metadata = { title: 'Política de privacidad | OptiBusiness' };
+export const metadata: Metadata = {
+  title: 'Política de privacidad | OptiBusiness',
+  description: 'Qué datos trato cuando me escribes, para qué los uso y qué derechos tienes.',
+  robots: 'noindex',
+};
 
 export default function Privacidad() {
   return (
@@ -74,7 +78,7 @@ export default function Privacidad() {
 
       <h2>6. Si eres una clínica cliente</h2>
       <p>
-        <T>Cuando una clínica contrata mis servicios, los datos de sus pacientes los trato como encargado del tratamiento, solo para lo que la clínica decide y bajo un contrato de encargado del tratamiento firmado antes de empezar. Eso se regula en ese contrato, no en esta página. [pendiente: Hugo valida este apartado y el contrato con un asesor de protección de datos.]</T>
+        <T>Cuando una clínica contrata mis servicios, los datos de sus pacientes los trato como encargado del tratamiento, solo para lo que la clínica decide y bajo un contrato de encargado del tratamiento firmado antes de empezar. Eso se regula en ese contrato, no en esta página.</T>
       </p>
 
       <h2>7. Menores</h2>

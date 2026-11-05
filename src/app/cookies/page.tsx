@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { LegalShell, T } from '@/components/Legal';
 
-export const metadata: Metadata = { title: 'Política de cookies | OptiBusiness' };
+export const metadata: Metadata = {
+  title: 'Política de cookies | OptiBusiness',
+  description: 'Qué guarda esta web en tu navegador y cómo ver de nuevo el aviso de cookies.',
+  robots: 'noindex',
+};
 
 export default function Cookies() {
   return (
@@ -30,7 +34,7 @@ export default function Cookies() {
           </tbody>
         </table>
       </div>
-      <p>Las cookies técnicas (necesarias) no requieren consentimiento. Las analíticas o de terceros solo se activarían si las aceptas.</p>
+      <p>Las cookies técnicas (necesarias) no requieren consentimiento.</p>
 
       <h2>3. Servicios de terceros</h2>
       <p>
@@ -38,9 +42,9 @@ export default function Cookies() {
         cookies. Consulta sus políticas.
       </p>
 
-      <h2>4. Cómo cambiar o retirar tu elección</h2>
+      <h2>4. Cómo ver de nuevo el aviso</h2>
       <ul>
-        <li>Desde el enlace "Configurar cookies" del pie de la página.</li>
+        <li>Desde el enlace "Aviso de cookies" del pie de la página.</li>
         <li>Desde la configuración de tu navegador (puedes bloquear o borrar cookies).</li>
       </ul>
 

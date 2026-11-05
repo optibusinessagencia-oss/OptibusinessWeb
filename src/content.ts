@@ -26,6 +26,7 @@ const waTexts = {
   quien: 'Hola Hugo, he leído quién eres y me gustaría hablar contigo. Origen - quien',
   faq_precio: 'Hola Hugo, quiero que me cuentes cuánto costaría para mi clínica. Origen - faq-precio',
   faq_whatsapp: 'Hola Hugo, tengo una duda sobre el agente de WhatsApp. Origen - faq-whatsapp',
+  whatsapp_seccion: 'Hola Hugo, he leído lo del agente de WhatsApp y quiero saber cómo funcionaría en mi clínica. Origen - whatsapp-seccion',
   faq: 'Hola Hugo, tengo una pregunta que no he visto en la web. Origen - faq',
   cta_final_prueba: 'Hola Hugo, quiero probar la recepcionista virtual 14 días gratis. Origen - cta-final-prueba',
   cta_final_whatsapp: 'Hola Hugo, quiero información del agente de WhatsApp. Origen - cta-final-whatsapp',
@@ -73,22 +74,22 @@ export const WA_CHAT = {
 export const VOZ = {
   cabecera: 'Clínica Ejemplo · Recepcionista virtual',
   chip: 'Llamada atendida',
-  hablando: ['CLIENTE HABLANDO', 'AGENTE HABLANDO'],
+  hablando: ['PACIENTE HABLANDO', 'RECEPCIONISTA HABLANDO'],
   aviso: 'Ejemplo ilustrativo. Clínica y paciente ficticias.',
   lineas: [
-    { quien: 'CLIENTE', texto: 'Hola, quería pedir cita para una limpieza facial.' },
-    { quien: 'AGENTE', texto: 'Hola, buenas tardes. Le atiende la recepcionista virtual de Clínica Ejemplo. Claro que sí. ¿Qué día le viene bien?' },
-    { quien: 'CLIENTE', texto: 'A ver, el martes por la mañana, si puede ser.' },
-    { quien: 'AGENTE', texto: 'El martes tengo libre a las 10:00 y a las 11:30. ¿Cuál prefiere?' },
-    { quien: 'CLIENTE', texto: 'A las 11:30. Me llamo Lucía.' },
-    { quien: 'AGENTE', texto: 'Perfecto, Lucía. Le dejo agendada la limpieza facial el martes a las 11:30. Si hay algún cambio, la clínica le avisa. ¿Necesita algo más?' },
-  ] as { quien: 'CLIENTE' | 'AGENTE'; texto: string }[],
+    { quien: 'PACIENTE', texto: 'Hola, quería pedir cita para una limpieza facial.' },
+    { quien: 'RECEPCIONISTA', texto: 'Hola, buenas tardes. Le atiende la recepcionista virtual de Clínica Ejemplo. Claro que sí. ¿Qué día le viene bien?' },
+    { quien: 'PACIENTE', texto: 'A ver, el martes por la mañana, si puede ser.' },
+    { quien: 'RECEPCIONISTA', texto: 'El martes tengo libre a las 10:00 y a las 11:30. ¿Cuál prefiere?' },
+    { quien: 'PACIENTE', texto: 'A las 11:30. Me llamo Lucía.' },
+    { quien: 'RECEPCIONISTA', texto: 'Perfecto, Lucía. Le dejo agendada la limpieza facial el martes a las 11:30. Si hay algún cambio, la clínica le avisa. ¿Necesita algo más?' },
+  ] as { quien: 'PACIENTE' | 'RECEPCIONISTA'; texto: string }[],
 };
 
 export const PROBLEMA = {
   titulo: 'Suena el teléfono y tú estás con una paciente',
   escena:
-    'Estás en cabina, con las manos ocupadas. El teléfono suena. No lo coges, porque delante tienes a alguien que ha venido a verte. Cuando sales, hay una llamada perdida de un número que no conoces. Puede ser una paciente nueva. ¿Qué hace si nadie le contesta? Probablemente llama a la siguiente clínica de la lista.',
+    'Estás en cabina, con las manos ocupadas. El teléfono suena. No lo coges, porque delante tienes a alguien que ha venido a verte. Cuando sales, hay una llamada perdida de un número que no conoces. Puede ser una paciente nueva. ¿Qué hace si nadie le contesta? Es fácil que llame a otra clínica.',
   cards: [
     { t: 'En cabina o en el gabinete', x: 'Tu recepción no puede atender el mostrador y tres llamadas a la vez.' },
     { t: 'A mediodía y a última hora', x: 'Los huecos en los que el equipo está comiendo, cerrando o con la agenda llena.' },
@@ -128,15 +129,16 @@ export const COMO = {
 };
 
 export const DEMO = {
-  titulo: 'Escúchala tú misma',
+  titulo: 'Escúchala tú',
   texto: 'Dale al botón y háblale como si fueras una paciente que llama. Pídele una cita, pregúntale por un tratamiento o por el horario.',
   boton: 'Hablar con la recepcionista',
   aviso: 'Es una prueba: la cita que pidas no queda reservada. No da precios ni consejos médicos. Necesitarás permitir el micrófono.',
+  datos: 'Al usar la demo, tu voz se procesa para responderte. Más info en la',
   cta: 'Quiero oírla con el nombre de mi clínica',
 };
 
 export const WHATSAPP = {
-  etiqueta: 'También hago',
+  etiqueta: 'Agente de WhatsApp',
   titulo: 'Un agente que contesta tu WhatsApp mientras trabajas',
   texto:
     'Tus pacientes escriben por WhatsApp porque es lo más cómodo. El agente contesta al momento, resuelve las dudas básicas (tratamientos, horarios, dirección) y agenda la cita en tu agenda. Si algo es clínico o no sabe contestarlo, lo anota y lo ve tu equipo.',
@@ -172,7 +174,7 @@ export const QUIEN = {
     'Soy Hugo Andreu, tengo 18 años y vivo en Valencia. Estudio el grado en Inteligencia Artificial en la UPV.',
     'Llevo cerca de un año construyendo agentes. Los probé primero en el negocio de mi padre, un local de wifi, telefonía y TV, para contestar las consultas que se repetían todos los días.',
     'Ahora abro con mis primeras clínicas. Todavía no tengo una lista de clínicas que enseñarte, y no voy a inventármela. Por eso la prueba es gratis y con tus llamadas: así lo ves tú.',
-    'Cuando me escribes, me contestas a mí. No hay un equipo comercial detrás.',
+    'Cuando me escribes, te contesto yo. No hay un equipo comercial detrás.',
   ],
   cta: 'Escríbeme por WhatsApp',
 };
@@ -184,7 +186,7 @@ export const FAQ = {
     { q: '¿Es una persona o funciona con inteligencia artificial?', a: 'Funciona con inteligencia artificial, y no lo escondo. Se presenta como la recepcionista virtual de tu clínica, así que quien llama sabe con quién habla. No sustituye a tu equipo: cubre las llamadas que hoy no se cogen.' },
     { q: '¿Y si no sabe responder?', a: 'Toma nota y la clínica devuelve la llamada. Solo hace tres cosas: dar información básica (horarios, dirección, tratamientos), pedir la cita y dejar el recado. Todo lo clínico lo anota y lo contesta una persona de tu equipo. No da precios ni consejos médicos. Puede equivocarse alguna vez; por eso, durante la prueba, revisamos juntos lo que ha pasado antes de que decidas nada.' },
     // Recortada: se han quitado "borrado a los 30 días" y "grabación" (pendientes, ver PENDIENTES.md).
-    { q: '¿Qué pasa con los datos de mis pacientes?', a: 'Es la pregunta correcta, y te lo cuento sin adornos. Antes de activar nada firmamos un contrato de encargado del tratamiento: tú decides para qué se usan los datos y yo los trato solo para eso. La recepcionista solo recoge nombre, teléfono, el motivo en una frase y el tratamiento. No pide síntomas ni diagnósticos. Si quieres revisarlo con tu asesor de protección de datos, te paso todo lo que necesite.' },
+    { q: '¿Qué pasa con los datos de mis pacientes?', a: 'Es la pregunta correcta, y te lo cuento sin adornos. Antes de activar nada firmo un contrato de encargado del tratamiento: tú decides para qué se usan los datos y yo los trato solo para eso. La recepcionista solo recoge nombre, teléfono, el motivo en una frase y el tratamiento. No pide síntomas ni diagnósticos. Si quieres revisarlo con tu asesor de protección de datos, te paso todo lo que necesite.' },
     { q: '¿Qué tengo que hacer yo?', a: 'Muy poco. Me cuentas cómo trabaja tu clínica (tratamientos, horarios, cómo llevas la agenda) y yo hago el resto. El desvío de llamadas lo configuro contigo por teléfono, en unos 10 minutos. Para deshacerlo, lo mismo.' },
     { q: '¿Cuánto cuesta?', a: 'Prefiero no darte un precio a ciegas. Depende de tu clínica, así que lo vemos en 15 minutos. Y la prueba de 14 días con la recepcionista es gratis.', cta: 'Cuéntame tu clínica y te digo', href: wa.faq_precio },
     { q: '¿Cómo funciona el agente de WhatsApp?', a: 'Contesta los mensajes que tus pacientes te escriben al WhatsApp de la clínica, con tus datos: tratamientos, horarios, dirección. Agenda la cita en tu agenda y, si algo no puede resolverlo, lo anota para que lo vea tu equipo. Se puede contratar aparte de la recepcionista o junto a ella. La prueba gratis de 14 días es de la recepcionista; del agente de WhatsApp lo hablamos tú y yo.', cta: 'Pregúntame por WhatsApp', href: wa.faq_whatsapp },
@@ -212,7 +214,7 @@ export const META = {
   title: 'OptiBusiness | Recepcionista virtual y agente de WhatsApp para clínicas',
   description:
     'Una recepcionista virtual que coge tus llamadas y un agente que contesta tu WhatsApp. Agendan la cita en la agenda de tu clínica. Pruébala 14 días gratis.',
-  ogTitle: 'Estás con una paciente. Ella coge el teléfono y agenda la cita.',
+  ogTitle: HERO_TITLE,
   ogDescription:
     'Recepcionista virtual para clínicas estéticas y dentales. Escúchala y pruébala 14 días gratis, sin permanencia.',
   schemaDescripcion: 'Recepcionista virtual y agente de WhatsApp para clínicas estéticas y dentales en España.',

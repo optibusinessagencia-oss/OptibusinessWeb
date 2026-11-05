@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { LegalShell, T } from '@/components/Legal';
 
-export const metadata: Metadata = { title: 'Aviso legal | OptiBusiness' };
+export const metadata: Metadata = {
+  title: 'Aviso legal | OptiBusiness',
+  description: 'Datos del titular y condiciones de uso de la web de OptiBusiness.',
+  robots: 'noindex',
+};
 
 export default function AvisoLegal() {
   return (

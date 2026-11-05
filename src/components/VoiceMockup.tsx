@@ -13,7 +13,7 @@ export default function VoiceMockup() {
   const n = VOZ.lineas.length;
   const { t, reduce } = useClock(n * PASO + 4);
   const visibles = Math.max(0, Math.floor(t / PASO) + 1);
-  const hablando = visibles === 0 ? 0 : VOZ.lineas[Math.min(visibles, n) - 1].quien === 'AGENTE' ? 1 : 0;
+  const hablando = visibles === 0 ? 0 : VOZ.lineas[Math.min(visibles, n) - 1].quien === 'RECEPCIONISTA' ? 1 : 0;
   const enCurso = !reduce && visibles <= n && t < n * PASO;
   const crono = reduce ? 7 : 7 + Math.max(0, Math.min(t, n * PASO));
 
@@ -47,7 +47,7 @@ export default function VoiceMockup() {
       <ol className="flex flex-col gap-2 px-4 pb-4">
         {VOZ.lineas.map((l, i) => {
           const on = i < visibles;
-          const agente = l.quien === 'AGENTE';
+          const agente = l.quien === 'RECEPCIONISTA';
           return (
             <motion.li
               key={i}

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const KEY = 'ob-aviso-cookies';
 
 // La web no usa cookies no esenciales ni analítica: el aviso solo informa.
-// "Configurar cookies" (pie) vuelve a abrirlo con el evento ob:cookies.
+// "Aviso de cookies" (pie) vuelve a abrirlo con el evento ob:cookies.
 export default function CookieNotice() {
   const [abierto, setAbierto] = useState(false);
 
@@ -30,19 +30,20 @@ export default function CookieNotice() {
   if (!abierto) return null;
   return (
     <section
-      aria-label="Tu privacidad"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl border border-linea bg-superficie p-5 shadow-2xl sm:left-auto sm:right-5 sm:bottom-5"
+      aria-label="Aviso de cookies"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-linea bg-superficie px-4 py-3 shadow-2xl sm:inset-x-auto sm:bottom-4 sm:right-4 sm:max-w-sm sm:rounded-xl sm:border"
     >
-      <p className="font-titulo text-lg font-bold">Tu privacidad</p>
-      <p className="mt-1 text-[0.95rem] text-tenue">
-        Uso cookies técnicas para que la web funcione.{' '}
-        <a href="/cookies/" className="font-semibold text-turquesa underline underline-offset-4">
-          Más información en la Política de cookies
-        </a>
-      </p>
-      <button type="button" onClick={cerrar} className="btn btn-primario mt-4 w-full sm:w-auto">
-        Entendido
-      </button>
+      <div className="flex items-center gap-3">
+        <p className="flex-1 text-[0.8rem] leading-snug text-tenue">
+          Esta web solo guarda en tu navegador que has visto este aviso.{' '}
+          <a href="/cookies/" className="font-semibold text-turquesa underline underline-offset-2">
+            Política de cookies
+          </a>
+        </p>
+        <button type="button" onClick={cerrar} className="btn btn-primario !min-h-10 !px-4 !py-2 shrink-0 text-sm">
+          Entendido
+        </button>
+      </div>
     </section>
   );
 }
