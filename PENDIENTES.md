@@ -10,7 +10,7 @@ Textos de `copy.md` que dependen de un `[pendiente]` y NO se muestran en la pág
 - **Email de contacto** (footer y legales): falta.
 - **Instagram en el pie**: por defecto no se enlaza.
 - **Open Graph**: falta imagen 1200x630 (`og:image`) y dominio final (`canonical`, `og:url`, `schema.url`). Al tener dominio, añadir `metadataBase` en `src/app/layout.tsx`.
-- **Agente de WhatsApp**: Hugo debe confirmar qué hace hoy (agenda directa, avisos). Se ha dejado el texto de copy.md sin la marca.
+- ~~**Agente de WhatsApp**~~: confirmado por Hugo el 5/11, agenda la cita en la agenda. Resuelto.
 - **Titular del hero**: ahora la variante C; se cambia en `HERO_TITLE` de `src/content.ts`.
 - **Banner de cookies**: la web no usa cookies no esenciales ni analítica, así que el banner solo informa. Si se añade analítica, hay que volver a poner Rechazar/Aceptar/Configurar (textos en `copy-legal.md`, sección 4).
 - **Páginas legales**: borradores con `[pendiente: ...]` visibles (titular, NIF, domicilio, proveedores, plazos...). Revisar con un asesor antes de publicar.
